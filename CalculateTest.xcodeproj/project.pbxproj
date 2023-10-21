@@ -16,6 +16,7 @@
 		8057D38C2AE43AE200E25293 /* CalculateTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D38B2AE43AE200E25293 /* CalculateTestTests.swift */; };
 		8057D3962AE43AE200E25293 /* CalculateTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D3952AE43AE200E25293 /* CalculateTestUITests.swift */; };
 		8057D3982AE43AE200E25293 /* CalculateTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D3972AE43AE200E25293 /* CalculateTestUITestsLaunchTests.swift */; };
+		8057D3A52AE43CF500E25293 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8057D3A42AE43CF500E25293 /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		8057D3912AE43AE200E25293 /* CalculateTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculateTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8057D3952AE43AE200E25293 /* CalculateTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTestUITests.swift; sourceTree = "<group>"; };
 		8057D3972AE43AE200E25293 /* CalculateTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8057D3A42AE43CF500E25293 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				8057D37D2AE43AE100E25293 /* Assets.xcassets */,
 				8057D37F2AE43AE100E25293 /* LaunchScreen.storyboard */,
 				8057D3822AE43AE100E25293 /* Info.plist */,
+				8057D3A42AE43CF500E25293 /* Calculator.swift */,
 			);
 			path = CalculateTest;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8057D3792AE43AE100E25293 /* ViewController.swift in Sources */,
+				8057D3A52AE43CF500E25293 /* Calculator.swift in Sources */,
 				8057D3752AE43AE100E25293 /* AppDelegate.swift in Sources */,
 				8057D3772AE43AE100E25293 /* SceneDelegate.swift in Sources */,
 			);

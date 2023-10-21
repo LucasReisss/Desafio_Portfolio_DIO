@@ -9,28 +9,44 @@ import XCTest
 @testable import CalculateTest
 
 final class CalculateTestTests: XCTestCase {
+    
+    var application: Calulator!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        application = Calulator()
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        application = nil
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    let a: Int = 5
+    let b: Int = 5
+    
+    func testAdd(){
+        let result = application.add( a, b)
+        
+        XCTAssertEqual(result, 10, "Ops algo errado")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSutract(){
+        let result = application.sutract( a, b)
+        
+        XCTAssertEqual(result, 0, "Ops algo errado")
     }
+    
+    func testMultiply(){
+        let result = application.multiply( a, b)
+        
+        XCTAssertEqual(result, 25, "Ops algo errado")
+    }
+    
+    func testDivide(){
+        let result = application.divide( a, b)
+        
+        XCTAssertEqual(result, 1, "Ops algo errado")
+    }
+    
+    
 
 }
