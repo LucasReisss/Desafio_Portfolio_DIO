@@ -7,17 +7,16 @@
 
 import SwiftUI
 import SDWebImageSwiftUI
-import Alamofire
-import SwiftyJSON
+import Combine
 
 struct ContentView: View {
     
-    @ObservedObject var obs = observer()
+    @ObservedObject var viewModel = ViewModel()
     var body: some View {
         NavigationView {
-            List(obs.datas){  i in
-                card(name: i.name, url: i.url)
-            }.navigationBarTitle("JSON Parse")
+            List(viewModel.datas){  data in
+                card(name: data.name, url: data.url)
+            }.navigationBarTitle("List")
         }
     }
 }
@@ -28,38 +27,17 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-class observer: ObservableObject {
-    
-    @Published var datas = [datatype]()
-    
-    init() {
-        AF.request("https://api.github.com/users/hadley/orgs").responseData { (data) in
-            
-            let json = try! JSON(data: data.data!)
-            
-            for i in json {
-                self.datas.append(datatype(id: i.1["id"].intValue, name: i.1["login"].stringValue, url: i.1["avatar_url"].stringValue))
-            }
-            
-        }
-    }
-}
-
-struct datatype: Identifiable {
-    var id: Int
-    var name: String
-    var url: String
-}
-
 struct card: View {
     var name = ""
     var url = ""
     
     var body: some View{
         HStack {
-            AnimatedImage(url: URL(string: url)!).resizable().frame(width: 60, height: 60).clipShape(Circle()).shadow(radius: 20)
+            AnimatedImage(url: URL(string: url)!).resizable().frame(width: 48, height: 48).clipShape(Circle()).shadow(color: Color.green, radius: 8)
             
-            Text(name).fontWeight(.heavy)
+            Text(name).font(.body).fontWeight(.medium)
+                .foregroundColor(Color.green)
+                
         }
     }
 }
